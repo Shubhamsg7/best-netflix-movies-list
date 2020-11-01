@@ -1,14 +1,16 @@
 import React from "react";
+import Heading from "./Heading";
+import Image from "./Image";
 
 function Card(props){
     console.log(props);
     return (
         <>
                 <div className="card">
-                    <img src={props.imgsrc} alt="movie1" className="card__img"/>
+                    <Image imgsrc={props.imgsrc} />
                     <div className="card__info">
                         <span className="card__category"><small>{props.title}</small></span>
-                        <h3 className="card__title">{props.sname}</h3>
+                        <Heading sname={props.sname} />
                         <a href={props.link} target="_blank">
                             <button>Watch Now</button>
                         </a>
